@@ -33,12 +33,20 @@ export default class AutoFrontMatterPlugin extends Plugin {
   }
 
   async updateFrontMatter(file: TFile) {
-    try {
-      await this.app.fileManager.processFrontMatter(file, (frontMatter) => {
-        modifyFrontMatter(frontMatter, this.settings.fieldOptions, file);
-      });
-    } catch (e) {
-      notice("happened an error, please check your front matter");
+    // TODO: Replace with plugin settings
+    const blacklist = [
+      "\/\_templates\/",
+      "\/\_scripts\/"
+    ]
+
+    if (!(new RegExp(blacklist.join("|")).test(file.path))) {
+      try {
+        await this.app.fileManager.processFrontMatter(file, (frontMatter) => {
+          modifyFrontMatter(frontMatter, this.settings.fieldOptions, file);
+        });
+      } catch (e) {
+        notice(`An error occurred.${e.name}\nCheck your front matter.`);
+      }
     }
   }
 

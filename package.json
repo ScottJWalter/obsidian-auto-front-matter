@@ -1,6 +1,6 @@
 {
   "name": "obsidian-auto-front-matter",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Auto update front matter",
   "main": "main.js",
   "scripts": {
@@ -14,7 +14,8 @@
   ],
   "author": "Conor Zhong <conorzhong@qq.com> (https://conorzhong.com)",
   "contributors": [
-    "Conor Zhong <conorzhong@qq.com> (https://conorzhong.com)"
+    "Conor Zhong <conorzhong@qq.com> (https://conorzhong.com)",
+    "Scott J. Walter <sjwalter@gmail.com> (https://scottjwalter.info)"
   ],
   "license": "MIT",
   "devDependencies": {

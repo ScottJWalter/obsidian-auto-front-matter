@@ -1,3 +1,12 @@
+> Hey!
+>
+> I just love this plugin ... **BUT** ... once turned on, it tries to YAML everything, including template(r) files (which is really frustrating).  All I needed was a way of not having the plugin run if the updated note is in a "please don't touch it" (blacklist) folder.
+>
+> This is a hack that implements a hardcoded blacklist (inside the `updateFrontMatter` function in the [plugin.ts](src/plugin.ts) file).  I just don't have time to PR this back right now (I needed it working so I could move on).  -- SjW
+> 
+
+---
+
 # Obsidian Auto Front Matter
 
 自动化 Obsidian Markdown 的 Front Matter

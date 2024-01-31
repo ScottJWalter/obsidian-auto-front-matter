@@ -36,7 +36,9 @@ export default class AutoFrontMatterPlugin extends Plugin {
     // TODO: Replace with plugin settings
     const blacklist = [
       "\/\_templates\/",
-      "\/\_scripts\/"
+      "\_templates\/",
+      "\/\_scripts\/",
+      "\_scripts\/"
     ]
 
     if (!(new RegExp(blacklist.join("|")).test(file.path))) {
